@@ -1,0 +1,11 @@
+[package]
+name = "bindfx"
+version = "1.0.0"
+edition = "2021"
+authors = ["WrapFX"]
+
+[dependencies]
+bindgen = "*"
+toml = "*"
+serde = "*"
+serde_derive = "*"
