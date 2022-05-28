@@ -1,0 +1,8 @@
+[input]
+path = "./path/to/dir" # Path to directory containing the library file and the wrapper
+name = "library" # Name of library (without extension)
+wrapper = "wrapper.h" # File containing all #include statements
+
+[output]
+path = "./out/path" # Target output folder
+name = "bindings" # Output file name (without extension)
