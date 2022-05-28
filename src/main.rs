@@ -13,7 +13,7 @@ use std::path::Path;
 const DEFAULT_CONFIG: &str = include_str!("default_config.toml");
 
 fn main() {
-    if Path::new("./config.toml").exists() {
+    if Path::new("./bindfx.toml").exists() {
         create_bindings();
     } else {
         create_default_config();
@@ -22,7 +22,7 @@ fn main() {
 
 fn create_bindings() {
     // Get config from config file
-    let config: Config = toml::from_str(fs::read_to_string("./config.toml").expect("Couldn't read config file").as_str())
+    let config: Config = toml::from_str(fs::read_to_string("./bindfx.toml").expect("Couldn't read config file").as_str())
         .expect("Couldn't parse config file");
 
     // Set bindgen config
@@ -43,7 +43,7 @@ fn create_bindings() {
 }
 
 fn create_default_config() {
-    let mut file = fs::File::create("./config.toml").expect("Couldn't create config file");
+    let mut file = fs::File::create("./bindfx.toml").expect("Couldn't create config file");
     file.write_all(DEFAULT_CONFIG.as_bytes()).expect("Couldn't write default config to file");
     println!("Succesfully created config file");
 }

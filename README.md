@@ -3,12 +3,12 @@
 **How to use**
 
 To create your bindings, simply run the executable. It will read the
-configuration from the ```config.toml``` file and output the bindings.
+configuration from the ```bindfx.toml``` file and output the bindings.
 
 **Configuration**
 
 All BindFX configuration is inside a TOML file.
-It should be called ```config.toml``` and be in the same directory as the program.
+It should be called ```bindfx.toml``` and be in the same directory as the program.
 
 If BindFX can't find a configuration file, it will automatically create one.
 
